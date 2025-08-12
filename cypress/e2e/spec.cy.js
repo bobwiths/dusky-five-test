@@ -14,4 +14,9 @@ describe('Testes Dusky Five', () => {
     cy.visit("https://kanban-dusky-five.vercel.app/")
     kanbanBoard.addNewBoard(board.boardName)
   })
+  it('Deletar nova lista', () => {
+    let board = randomData.newBoard
+    cy.visit("https://kanban-dusky-five.vercel.app/")
+    kanbanBoard.deleteNewBoard(board.boardName)
+  })
 })
